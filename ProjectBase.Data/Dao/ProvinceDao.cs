@@ -12,7 +12,7 @@ namespace ProjectBase.Data
     {
         protected override IQueryOver<IProvince, IProvince> BuildId(IQueryOver<IProvince, IProvince> query, object id)
         {
-            var _id = Convert.ToString(id);
+            var _id = new Guid(Convert.ToString(id));
 
             return base.BuildId(query, id).Where(x => x.Id == _id);
         }

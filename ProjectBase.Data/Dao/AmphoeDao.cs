@@ -13,7 +13,7 @@ namespace ProjectBase.Data
     {
         protected override IQueryOver<IAmphoe, IAmphoe> BuildId(IQueryOver<IAmphoe, IAmphoe> query, object id)
         {
-            var _id = Convert.ToString(id);
+            var _id = new Guid(Convert.ToString(id));
 
             return base.BuildId(query, id).Where(x => x.Id == _id);
         }
@@ -34,7 +34,7 @@ namespace ProjectBase.Data
 
         protected override IQueryOver<IAmphoe, IAmphoe> BuildParent(IQueryOver<IAmphoe, IAmphoe> query, object parentId)
         {
-            var _id = Convert.ToString(parentId);
+            var _id = new Guid(Convert.ToString(parentId));
 
             IAmphoe e = null;
 

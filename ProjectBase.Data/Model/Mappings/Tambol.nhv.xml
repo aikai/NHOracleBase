@@ -4,8 +4,5 @@
 		<property name="Id">
 			<not-null />
 		</property>
-		<property name="TamTname">
-			<not-null />
-		</property>
 	</class>
 </nhv-mapping>

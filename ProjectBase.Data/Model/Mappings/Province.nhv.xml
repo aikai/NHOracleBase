@@ -4,11 +4,5 @@
 		<property name="Id">
 			<not-null />
 		</property>
-		<property name="ProvTname">
-			<not-null />
-		</property>
-		<property name="RegId">
-			<not-null />
-		</property>
 	</class>
 </nhv-mapping>

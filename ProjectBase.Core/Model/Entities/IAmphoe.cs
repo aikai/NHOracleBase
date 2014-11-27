@@ -9,9 +9,14 @@ namespace ProjectBase.Core.Model
 {
     public interface IAmphoe
     {
-        string Id { get; set; }
-        string AmpEname { get; set; }
-        string AmpTname { get; set; }
+        Guid Id { get; set; }
+        string ThaiName { get; set; }
+        string EnglishName { get; set; }
+        IUserAccount CreateBy { get; set; }
+        IValueValidation CreateDate { get; set; }
+        IUserAccount UpdateBy { get; set; }
+        IValueValidation UpdateDate { get; set; }
+
         IProvince Province { get; set; }
 
         Iesi.Collections.Generic.ISet<ITambol> Tambols { get; set; }

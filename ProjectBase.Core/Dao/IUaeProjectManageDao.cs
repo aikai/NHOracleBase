@@ -8,7 +8,7 @@ namespace ProjectBase.Core
 {
     public interface IUaeProjectManageDao : IDao<IUaeProjectManage>
     {
-        IList<IUaeProjectManage> Search(string projId, string projTname);
-        IList<IUaeProjectManage> Search(DateTime? startDate, DateTime? endDate, string dept, string projCode, string projTname, string projEname);
+        //IList<IUaeProjectManage> Search(string projId, string projTname);
+        //IList<IUaeProjectManage> Search(DateTime? startDate, DateTime? endDate, string dept, string projCode, string projTname, string projEname);
     }
 }

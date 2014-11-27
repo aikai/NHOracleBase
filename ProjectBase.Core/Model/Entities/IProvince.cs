@@ -9,11 +9,14 @@ namespace ProjectBase.Core.Model
 {
     public interface IProvince
     {
-        string Id { get; set; }
-        string ProvEname { get; set; }
-        string ProvSign { get; set; }
-        string ProvTname { get; set; }
-        string RegId { get; set; }
+        Guid Id { get; set; }
+        string ShortName { get; set; }
+        string ThaiName { get; set; }
+        string EnglishName { get; set; }
+        IUserAccount CreateBy { get; set; }
+        IValueValidation CreateDate { get; set; }
+        IUserAccount UpdateBy { get; set; }
+        IValueValidation UpdateDate { get; set; }
 
         bool Equals(object obj);
         bool Equals(IProvince obj);

@@ -12,7 +12,7 @@ namespace ProjectBase.Data
     {
         protected override IQueryOver<ITambol, ITambol> BuildId(IQueryOver<ITambol, ITambol> query, object id)
         {
-            var _id = Convert.ToString(id);
+            var _id = new Guid(Convert.ToString(id));
 
             return base.BuildId(query, id).Where(x => x.Id == _id);
         }
@@ -33,7 +33,7 @@ namespace ProjectBase.Data
 
         protected override IQueryOver<ITambol, ITambol> BuildParent(IQueryOver<ITambol, ITambol> query, object parentId)
         {
-            var _id = Convert.ToString(parentId);
+            var _id = new Guid(Convert.ToString(parentId));
 
             ITambol e = null;
 
