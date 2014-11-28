@@ -66,8 +66,8 @@ namespace ProjectBase.Test
                     var entity = EntityFactory.CreateAmphoe();
 
                     //entity.Id = GridView1.Rows.Count;
-                    entity.ThaiName = ((TextBox)GridView1.Rows[0].Cells[2].Controls[0]).Text;
-                    entity.EnglishName = ((TextBox)GridView1.Rows[0].Cells[3].Controls[0]).Text;
+                    entity.ThaiName = ((TextBox)GridView1.Rows[0].Cells[3].Controls[0]).Text;
+                    entity.EnglishName = ((TextBox)GridView1.Rows[0].Cells[4].Controls[0]).Text;
 
                     var user = ComponentFactory.CreateUserAccount();
                     user.UserId = "0402";
@@ -92,8 +92,8 @@ namespace ProjectBase.Test
 
                     if (entity != null)
                     {
-                        entity.ThaiName = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
-                        entity.EnglishName = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+                        entity.ThaiName = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+                        entity.EnglishName = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
 
                         var user = ComponentFactory.CreateUserAccount();
                         user.UserId = "0402";

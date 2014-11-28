@@ -200,6 +200,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="AmphoeTest.aspx" />
+    <Content Include="HrDepartTest.aspx" />
+    <Content Include="HrPositionTest.aspx" />
+    <Content Include="UaeProjManageTest.aspx" />
     <Content Include="ProvinceTest.aspx" />
     <Content Include="TambolTest.aspx" />
     <Content Include="Images\accent.png" />
@@ -315,6 +318,27 @@
     </Compile>
     <Compile Include="AmphoeTest.aspx.designer.cs">
       <DependentUpon>AmphoeTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrDepartTest.aspx.cs">
+      <DependentUpon>HrDepartTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrDepartTest.aspx.designer.cs">
+      <DependentUpon>HrDepartTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrPositionTest.aspx.cs">
+      <DependentUpon>HrPositionTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrPositionTest.aspx.designer.cs">
+      <DependentUpon>HrPositionTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UaeProjManageTest.aspx.cs">
+      <DependentUpon>UaeProjManageTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UaeProjManageTest.aspx.designer.cs">
+      <DependentUpon>UaeProjManageTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProvinceTest.aspx.cs">
       <DependentUpon>ProvinceTest.aspx</DependentUpon>

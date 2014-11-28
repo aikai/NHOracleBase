@@ -48,6 +48,8 @@
     <Compile Include="Model\Components\IAddress.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Entities\IHrPosition.cs" />
+    <Compile Include="Model\Entities\IHrDepart.cs" />
     <Compile Include="Model\Entities\IAmphoe.cs">
       <SubType>Code</SubType>
     </Compile>

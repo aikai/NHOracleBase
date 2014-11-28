@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AmphoeTest.aspx.cs" Inherits="ProjectBase.Test.AmphoeTest" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="HrDepartTest.aspx.cs" Inherits="ProjectBase.Test.HrDepartTest" %>
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
 </asp:Content>
@@ -17,13 +17,9 @@
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" ReadOnly="True" />
-                <asp:BoundField DataField="Province.Id" HeaderText="Province.Id" SortExpression="Province.Id" ReadOnly="True" />
-                <asp:BoundField DataField="ThaiName" HeaderText="ThaiName" SortExpression="ThaiName" />
-                <asp:BoundField DataField="EnglishName" HeaderText="EnglishName" SortExpression="EnglishName" />
-                <asp:BoundField DataField="CreateBy" HeaderText="CreateBy" SortExpression="CreateBy" ReadOnly="True" />
-                <asp:BoundField DataField="CreateDate" HeaderText="CreateDate" SortExpression="CreateDate" ReadOnly="True" />
-                <asp:BoundField DataField="UpdateBy" HeaderText="UpdateBy" SortExpression="UpdateBy" ReadOnly="True" />
-                <asp:BoundField DataField="UpdateDate" HeaderText="UpdateDate" SortExpression="UpdateDate" ReadOnly="True" />
+                <asp:BoundField DataField="DeptTname" HeaderText="DeptTname" SortExpression="DeptTname" />
+                <asp:BoundField DataField="DeptEname" HeaderText="DeptEname" SortExpression="DeptEname" />
+                <asp:BoundField DataField="DeptGroup" HeaderText="DeptGroup" SortExpression="DeptGroup" />
                 <asp:CommandField HeaderText="Delete" ShowDeleteButton="True" />
             </Columns>
             <RowStyle BackColor="#E3EAEB" />

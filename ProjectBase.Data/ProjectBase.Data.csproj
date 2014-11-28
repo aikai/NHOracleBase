@@ -56,6 +56,8 @@
     <Compile Include="Dao\AmphoeDao.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Dao\HrPositionDao.cs" />
+    <Compile Include="Dao\HrDepartDao.cs" />
     <Compile Include="Dao\UaeProjectManageDao.cs" />
     <Compile Include="Dao\ProvinceDao.cs">
       <SubType>Code</SubType>
@@ -69,6 +71,8 @@
     <Compile Include="Model\Entities\Amphoe.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Entities\HrDepart.cs" />
+    <Compile Include="Model\Entities\HrPosition.cs" />
     <Compile Include="Model\Entities\Province.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,6 +92,10 @@
     </Content>
     <EmbeddedResource Include="Model\Mappings\Province.hbm.xml" />
     <EmbeddedResource Include="Model\Mappings\Province.nhv.xml" />
+    <EmbeddedResource Include="Model\Mappings\HrDepart.hbm.xml" />
+    <EmbeddedResource Include="Model\Mappings\HrDepart.nhv.xml" />
+    <EmbeddedResource Include="Model\Mappings\HrPosition.hbm.xml" />
+    <EmbeddedResource Include="Model\Mappings\HrPosition.nhv.xml" />
     <Content Include="nhvalidator.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -10,12 +10,14 @@ namespace ProjectBase.Core
     /// Provides an interface for retrieving entity objects
     /// </summary>
     public interface IEntityFactory
-    {
-        IUaeProjectManage CreateUaeProjectManage();
+    {        
         IProvince CreateProvince();
         IAmphoe CreateAmphoe();
         ITambol CreateTambol();
         IAddress CreateAddress();
+        IHrPosition CreateHrPosition();
+        IHrDepart CreateHrDepart();
+        IUaeProjectManage CreateUaeProjectManage();
     }
 
     // There's no need to declare each of the entity interfaces in its own file, so just add them inline here.

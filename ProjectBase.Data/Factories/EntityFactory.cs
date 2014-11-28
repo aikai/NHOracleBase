@@ -46,11 +46,6 @@ namespace ProjectBase.Data
         }
         #endregion
 
-        public IUaeProjectManage CreateUaeProjectManage()
-        {
-            return new UaeProjectManage();
-        }
-
         public IProvince CreateProvince()
         {
             return new Province();
@@ -69,6 +64,21 @@ namespace ProjectBase.Data
         public IAddress CreateAddress()
         {
             return new Address();
+        }
+
+        public IHrPosition CreateHrPosition()
+        {
+            return new HrPosition();
+        }
+
+        public IHrDepart CreateHrDepart()
+        {
+            return new HrDepart();
+        }
+
+        public IUaeProjectManage CreateUaeProjectManage()
+        {
+            return new UaeProjectManage();
         }
 
         #region Inline Entity implementations

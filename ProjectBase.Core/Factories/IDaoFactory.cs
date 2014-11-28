@@ -10,11 +10,13 @@ namespace ProjectBase.Core
     /// Provides an interface for retrieving DAO objects
     /// </summary>
     public interface IDaoFactory
-    {
-        IUaeProjectManageDao GetUaeProjectManageDao();
+    {        
         IProvinceDao GetProvinceDao();
         IAmphoeDao GetAmphoeDao();
         ITambolDao GetTambolDao();
+        IHrPositionDao GetHrPositionDao();
+        IHrDepartDao GetHrDepartDao();
+        IUaeProjectManageDao GetUaeProjectManageDao();
     }
 
     // There's no need to declare each of the DAO interfaces in its own file, so just add them inline here.
@@ -23,5 +25,7 @@ namespace ProjectBase.Core
     public interface IProvinceDao : IDao<IProvince> { }
     public interface IAmphoeDao : IDao<IAmphoe> { }
     public interface ITambolDao : IDao<ITambol> { }
+    public interface IHrPositionDao : IDao<IHrPosition> { }
+    public interface IHrDepartDao : IDao<IHrDepart> { }
     #endregion
 }

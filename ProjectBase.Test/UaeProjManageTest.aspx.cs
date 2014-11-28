@@ -10,13 +10,13 @@ using ProjectBase.Web.PageControl;
 
 namespace ProjectBase.Test
 {
-    public partial class TambolTest : ListPage
+    public partial class UaeProjManageTest : ListPage
     {
         protected override void Search()
         {
             try
             {
-                var dao = DaoFactory.GetTambolDao();
+                var dao = DaoFactory.GetUaeProjectManageDao();
 
                 GridView1.DataSource = dao.GetAll();
                 GridView1.DataBind();
@@ -59,29 +59,15 @@ namespace ProjectBase.Test
         {
             try
             {
-                var dao = DaoFactory.GetTambolDao();
+                var dao = DaoFactory.GetUaeProjectManageDao();
 
                 if (((LinkButton)GridView1.Rows[0].Cells[0].Controls[0]).Text == "Insert")
                 {
-                    var entity = EntityFactory.CreateTambol();
+                    var entity = EntityFactory.CreateUaeProjectManage();
 
-                    //entity.Id = GridView1.Rows.Count;
-                    entity.ThaiName = ((TextBox)GridView1.Rows[0].Cells[3].Controls[0]).Text;
-                    entity.EnglishName = ((TextBox)GridView1.Rows[0].Cells[4].Controls[0]).Text;
-
-                    var user = ComponentFactory.CreateUserAccount();
-                    user.UserId = "0402";
-
-                    SessionAdapter.User = user;
-
-                    #region Create by
-                    entity.CreateBy = SessionAdapter.User;
-
-                    var createDatetime = ComponentFactory.CreateDateTime();
-                    createDatetime.Value = DateTime.Now;
-
-                    entity.CreateDate = createDatetime;
-                    #endregion
+                    entity.ProjCode = ((TextBox)GridView1.Rows[0].Cells[3].Controls[0]).Text;
+                    entity.ProjEname = ((TextBox)GridView1.Rows[0].Cells[4].Controls[0]).Text;
+                    entity.ProjTname = ((TextBox)GridView1.Rows[0].Cells[5].Controls[0]).Text;
 
                     dao.Save(entity);
                 }
@@ -92,22 +78,9 @@ namespace ProjectBase.Test
 
                     if (entity != null)
                     {
-                        entity.ThaiName = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
-                        entity.EnglishName = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
-
-                        var user = ComponentFactory.CreateUserAccount();
-                        user.UserId = "0402";
-
-                        SessionAdapter.User = user;
-
-                        #region Update by
-                        entity.UpdateBy = SessionAdapter.User;
-
-                        var updateDatetime = ComponentFactory.CreateDateTime();
-                        updateDatetime.Value = DateTime.Now;
-
-                        entity.UpdateDate = updateDatetime;
-                        #endregion
+                        entity.ProjCode = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+                        entity.ProjEname = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
+                        entity.ProjTname = ((TextBox)GridView1.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
 
                         dao.Update(entity);
                     }
@@ -126,11 +99,11 @@ namespace ProjectBase.Test
         {
             try
             {
-                var dao = DaoFactory.GetTambolDao();
+                var dao = DaoFactory.GetUaeProjectManageDao();
                 var dt = dao.GetAll();
 
                 // Here we'll add a blank row to the returned DataTable
-                dt.Insert(0, EntityFactory.CreateTambol());
+                dt.Insert(0, EntityFactory.CreateUaeProjectManage());
 
                 //Creating the first row of GridView to be Editable
                 GridView1.EditIndex = 0;
@@ -153,7 +126,7 @@ namespace ProjectBase.Test
         {
             try
             {
-                var dao = DaoFactory.GetTambolDao();
+                var dao = DaoFactory.GetUaeProjectManageDao();
                 var id = GridView1.DataKeys[e.RowIndex].Value;
                 var entity = dao.GetById(id, false);
 

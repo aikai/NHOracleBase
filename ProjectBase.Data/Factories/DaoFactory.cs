@@ -46,11 +46,6 @@ namespace ProjectBase.Data
         }
         #endregion
 
-        public IUaeProjectManageDao GetUaeProjectManageDao()
-        {
-            return new UaeProjectManageDao();
-        }
-
         public IProvinceDao GetProvinceDao()
         {
             return new ProvinceDao();
@@ -64,6 +59,21 @@ namespace ProjectBase.Data
         public ITambolDao GetTambolDao()
         {
             return new TambolDao();
+        }
+
+        public IHrPositionDao GetHrPositionDao()
+        {
+            return new HrPositionDao();
+        }
+
+        public IHrDepartDao GetHrDepartDao()
+        {
+            return new HrDepartDao();
+        }
+
+        public IUaeProjectManageDao GetUaeProjectManageDao()
+        {
+            return new UaeProjectManageDao();
         }
 
         #region Inline DAO implementations
